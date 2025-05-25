@@ -1,0 +1,7 @@
+{
+  "name": "Gin UI JSON Builder",
+  "id": "com.example.ginuijsonbuilder",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"]
+}
