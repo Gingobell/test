@@ -554,8 +554,18 @@ function createProgressBar(component, colorScheme) {
   fill.fills = [{ type: "SOLID", color: colorScheme.primary }];
   
   // 构建层级
-  background.appendChild(fill);
-  container.appendChild(background);
+  const barFrame = figma.createFrame();
+  barFrame.name = "Bar";
+  barFrame.resize(300, 8);
+  barFrame.layoutMode = "NONE";
+  barFrame.fills = [];
+
+  barFrame.appendChild(background);
+  barFrame.appendChild(fill);
+  fill.x = 0;
+  fill.y = 0;
+
+  container.appendChild(barFrame);
   
   return container;
 }
